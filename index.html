@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caixa de Presente</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f8e1e7;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        h2 {
+            font-size: 24px;
+            color: #ff3b3b;
+            margin-bottom: 20px;
+        }
+
+        .box-container {
+            position: relative;
+            cursor: pointer;
+        }
+
+        .box {
+            width: 150px;
+            height: 150px;
+            background: #ff3b3b;
+            position: relative;
+            border-radius: 10px;
+        }
+
+        .box::before {
+            content: "";
+            position: absolute;
+            width: 20px;
+            height: 150px;
+            background: #fff;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .lid {
+            width: 170px;
+            height: 40px;
+            background: #ff3b3b;
+            position: absolute;
+            top: -30px;
+            left: -10px;
+            border-radius: 10px 10px 0 0;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .lid::before {
+            content: "";
+            position: absolute;
+            width: 80px;
+            height: 40px;
+            background: #fff;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 10px 10px 0 0;
+        }
+
+        .box-container:hover .lid {
+            transform: translateY(-10px);
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-2px); }
+            50% { transform: translateX(2px); }
+            75% { transform: translateX(-1px); }
+        }
+
+        .box-container {
+            animation: shake 1.5s infinite;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Para você, meu amor ❤️</h2>
+    <br><br>
+
+    <div class="box-container" onclick="openGift()">
+        <div class="lid"></div>
+        <div class="box"></div>
+    </div>
+
+    <script>
+        function openGift() {
+            window.location.href = "inicio.html";
+        }
+    </script>
+
+</body>
+</html>

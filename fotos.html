@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nossas Fotos 📸</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .galeria {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .foto-container {
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            padding: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .foto-container img {
+            width: 200px;
+            /* Ajuste o tamanho das imagens conforme necessário */
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .botao {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #ff5c8d;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        .botao:hover {
+            background-color: #ff3385;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>📸 Momentos Especiais 📸</h1>
+    <div class="galeria">
+        <div class="foto-container">
+            <img src="img/1.jpg" alt="Nosso momento especial">
+        </div>
+        <div class="foto-container">
+            <img src="img/2.jpg" alt="Nosso sorriso">
+        </div>
+        <div class="foto-container">
+            <img src="img/3.jpg" alt="Amor verdadeiro">
+        </div>
+    </div>
+    <div class="galeria">
+        <div class="foto-container">
+            <img src="img/4.jpg" alt="Nosso momento especial">
+        </div>
+        <div class="foto-container">
+            <img src="img/image.png" alt="Nosso sorriso">
+            <p><br><br>Eu te amo!</p>
+        </div>
+        <div class="foto-container">
+            <img src="img/6.jpg" alt="Amor verdadeiro">
+        </div>
+    </div>
+    <a href="inicio.html" class="botao">Voltar</a>
+</body>
+
+</html>
